@@ -1,0 +1,41 @@
+# MLflow + Jupyter setup
+
+# Run using Docker compose 
+
+Docker Compose
+The MLflow repository includes a ready-to-run Compose project under docker-compose/ that provisions MLflow, PostgreSQL, and RustFS.
+
+https://mlflow.org/docs/latest/self-hosting/
+https://github.com/mlflow/mlflow/tree/master/docker-compose
+
+
+```sh
+git clone https://github.com/mlflow/mlflow.git
+cd mlflow/docker-compose
+cp .env.dev.example .env
+docker compose up -d
+# Open http://localhost:5000 in your browser to view the UI.
+```
+
+If you are using local tracking (option A or B), run the following command and access the MLflow UI at http://localhost:5000.
+
+```sh
+# For Option A
+mlflow server --backend-store-uri sqlite:///mlflow.db --port 5000
+# For Option B
+mlflow server --port 5000
+```
+
+
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+
+pip install mlflow jupyterlab
+jupyter lab
+
+mlflow ui
+mlflow server --port 5000
+
+mlflow --version
+```
