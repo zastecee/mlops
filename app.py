@@ -11,14 +11,12 @@ mlflow.set_tracking_uri("sqlite:///mlflow.db")
 mlflow.set_experiment("my-first-experiment")
 
 # Step 3: Verify Your Connection
-# Print connection information
 print(f"MLflow Tracking URI: {mlflow.get_tracking_uri()}")
 print(f"Active Experiment: {mlflow.get_experiment_by_name('my-first-experiment')}")
 
 import pandas as pd
 
 house_price_data = pd.read_csv("./house_price_data.csv")
-
 house_price_data = house_price_data.dropna(axis=0)
 
 # Load the House price dataset

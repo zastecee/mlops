@@ -1,0 +1,23 @@
+artifact_path: /home/zelitosaide/Documents/mlops/mlruns/1/models/m-ee244a518b36467cbfe6322a26078bc6/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.14.4
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.9.0
+    skops_trusted_types: null
+mlflow_version: 3.13.0
+model_id: m-ee244a518b36467cbfe6322a26078bc6
+model_size_bytes: 780
+model_uuid: m-ee244a518b36467cbfe6322a26078bc6
+prompts: null
+run_id: d1d6d601cf31438fa43fef0eb6009288
+utc_time_created: '2026-06-09 09:33:42.490460'
