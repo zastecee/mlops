@@ -1,3 +1,18 @@
+
+# Github setup
+
+```bash
+git config --global user.name "zastecee"
+git config --global user.email "zastecee@gmail.com"
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/zastecee/mlops.git
+git push -u origin main
+```
+
+
 # MLflow + Jupyter setup
 
 # Run using Docker compose 
