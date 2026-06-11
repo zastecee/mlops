@@ -53,4 +53,21 @@ mlflow ui
 mlflow server --port 5000
 
 mlflow --version
+
+docker run -p 5001:8080 "house_sales_model"
+
+
+curl -X POST http://127.0.0.1:5001/invocations   -H "Content-Type: application/json"   -d '{
+      "dataframe_records": [
+        {
+          "Rooms": 2,
+          "Bathroom": 1.0,
+          "Landsize": 156.0,
+          "BuildingArea": 79.0,
+          "YearBuilt": 1900.0,
+          "Lattitude": -37.8079,
+          "Longtitude": 144.9934
+        }
+      ]
+    }'
 ```

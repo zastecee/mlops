@@ -1,0 +1,21 @@
+GET http://127.0.0.1:5001/invocations HTTP/1.1
+
+###
+
+POST http://127.0.0.1:5001/invocations HTTP/1.1
+content-type: application/json
+
+{
+    "dataframe_records": [
+        {
+            "Rooms": 2,
+            "Bathroom": 1.0,
+            "Landsize": 156.0,
+            "BuildingArea": 79.0,
+            "YearBuilt": 1900.0,
+            "Lattitude": -37.8079,
+            "Longtitude": 144.9934
+        }
+    ]
+}
+
